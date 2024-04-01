@@ -2,7 +2,7 @@ import { FaPhone } from "react-icons/fa6";
 import { RiContactsFill } from "react-icons/ri";
 import css from "./Contact.module.css";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsOps";
+import { deleteContact } from "../../redux/contacts/operations";
 import toast from "react-hot-toast";
 
 const Contacts = ({ contacts }) => {
@@ -22,7 +22,10 @@ const Contacts = ({ contacts }) => {
       </div>
       <button
         onClick={() => {
-          dispatch(deleteContact(id)).unwrap().then(() => toast.success('Deleted')).catch((e) => toast.error(e));
+          dispatch(deleteContact(id))
+            .unwrap()
+            .then(() => toast.success("Deleted"))
+            .catch((e) => toast.error(e));
         }}
       >
         Delete
