@@ -1,4 +1,4 @@
-import { createAction, createSelector, createSlice } from "@reduxjs/toolkit";
+import { createSelector, createSlice } from "@reduxjs/toolkit";
 import { addContact, deleteContact, fetchContacts } from "./operations";
 import { selectNameFilter } from "../filters/slice";
 
