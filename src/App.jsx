@@ -7,6 +7,11 @@ import { Suspense, lazy, useEffect } from "react";
 import { fetchContacts } from "./redux/contacts/operations";
 import toast, { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
+import { PrivateRoute } from "./components/PrivateRoute";
+import { RestrictedRoute } from "./components/RestrictedRoute";
+import Layout from "./components/Layout/Layout";
+import { selectIsRefreshing } from "./redux/auth/selectors";
+import { refreshUser } from "./redux/auth/operations";
 
 const HomePage = lazy(() => import("./pages/Home"));
 const ContactsPage = lazy(() => import("./pages/Contacts"));
@@ -16,32 +21,32 @@ const NotFoundPage = lazy(() => import("./pages/NotFound"));
 
 const App = () => {
   const dispatch = useDispatch();
-
   useEffect(() => {
-    dispatch(fetchContacts())
-      .unwrap()
-      .then(() => toast.success("Downloaded"))
-      .catch((e) => toast.error(e));
+    dispatch(refreshUser());
   }, [dispatch]);
 
   return (
-    <div>
-      {/* <h1>Phonebook</h1>
-      <ContactForm />
-      <SearchBox />
-      <ContactList />
-       */}
+    <Layout>
       <Suspense>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/contacts" element={<ContactsPage />} />
+          <Route
+            path="/register"
+            element={<RestrictedRoute component={<RegisterPage />} />}
+          />
+          <Route
+            path="/login"
+            element={<RestrictedRoute component={<LoginPage />} />}
+          />
+          <Route
+            path="/contacts"
+            element={<PrivateRoute component={<ContactsPage />} />}
+          />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
       <Toaster />
-    </div>
+    </Layout>
   );
 };
 export default App;
