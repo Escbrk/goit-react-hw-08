@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
 import ContactForm from "./components/ContactForm/ContactForm";
 import ContactList from "./components/ContactList/ContactList";
@@ -20,12 +20,16 @@ const LoginPage = lazy(() => import("./pages/Login"));
 const NotFoundPage = lazy(() => import("./pages/NotFound"));
 
 const App = () => {
+  const isRefreshing = useSelector(selectIsRefreshing);
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  return (
+  return isRefreshing ? (
+    <b>Loading...</b>
+  ) : (
     <Layout>
       <Suspense>
         <Routes>

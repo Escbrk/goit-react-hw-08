@@ -6,6 +6,7 @@ import { selectVisibleContacts } from "../../redux/contacts/slice";
 export default function ContactList() {
   const filter = useSelector(selectVisibleContacts);
 
+
   return (
     <ul>
       {filter.map((filteredContact) => {

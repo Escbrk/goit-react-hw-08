@@ -12,20 +12,20 @@ const validationSchema = () =>
       .min(3, "Too Short!")
       .max(50, "Too Long!")
       .required("This field is required"),
-    phone: Yup.string()
+    number: Yup.string()
       .min(3, "Too Short!")
       .max(15, "Too Long!")
       .required("This field is required"),
   });
 
-export default function ContactForm() {
+const ContactForm = () => {
   const nameFieldId = useId();
   const numberFieldId = useId();
   const dispatch = useDispatch();
 
   return (
     <Formik
-      initialValues={{ name: "", phone: "" }}
+      initialValues={{ name: "", number: "" }}
       validationSchema={validationSchema}
       onSubmit={(values, actions) => {
         dispatch(addContact(values))
@@ -41,11 +41,13 @@ export default function ContactForm() {
         <ErrorMessage name="name" component="span" />
 
         <label htmlFor={numberFieldId}>Number</label>
-        <Field id={numberFieldId} name="phone" />
-        <ErrorMessage name="phone" component="span" />
+        <Field id={numberFieldId} name="number" />
+        <ErrorMessage name="number" component="span" />
 
         <button type="submit">Add contact</button>
       </Form>
     </Formik>
   );
-}
+};
+
+export default ContactForm;

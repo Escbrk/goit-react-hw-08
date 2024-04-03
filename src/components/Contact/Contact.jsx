@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 
 const Contacts = ({ contacts }) => {
   const dispatch = useDispatch();
-  const { name, phone, id } = contacts;
+  const { name, number, id } = contacts;
   return (
     <>
       <div>
@@ -17,7 +17,7 @@ const Contacts = ({ contacts }) => {
         </p>
         <p>
           <FaPhone />
-          {phone}
+          {number}
         </p>
       </div>
       <button

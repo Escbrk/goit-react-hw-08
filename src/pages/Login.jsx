@@ -1,6 +1,6 @@
 import { Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
-import { login } from "../redux/auth/operations";
+import { logIn } from "../redux/auth/operations";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -11,7 +11,8 @@ const Login = () => {
         password: "",
       }}
       onSubmit={(values, actions) => {
-        dispatch(login(values));
+        dispatch(logIn(values));
+        // actions.resetForm();
       }}
     >
       <Form>

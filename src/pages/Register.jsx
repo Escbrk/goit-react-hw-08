@@ -13,6 +13,7 @@ const Register = () => {
       }}
       onSubmit={(values, actions) => {
         dispatch(register(values));
+        // actions.resetForm();
       }}
     >
       <Form>
