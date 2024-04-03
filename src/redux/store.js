@@ -14,14 +14,13 @@ import {
   REGISTER,
 } from "redux-persist";
 
-const persistedAuthReducer = persistReducer(
-  {
-    key: "authSlice",
-    storage,
-    whitelist: ["token"],
-  },
-  usersReducer
-);
+const authPersistConfig = {
+  key: "authSlice",
+  storage,
+  whitelist: ["token"],
+};
+
+const persistedAuthReducer = persistReducer(authPersistConfig, usersReducer);
 
 export const store = configureStore({
   reducer: {

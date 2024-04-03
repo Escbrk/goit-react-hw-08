@@ -1,7 +1,7 @@
 import RegistrationForm from "../components/Forms/RegistrationForm/RegistrationForm";
 
-const Register = () => {
+const Registration = () => {
   return <RegistrationForm />;
 };
 
-export default Register;
+export default Registration;

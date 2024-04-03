@@ -6,13 +6,13 @@ import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
 import { PrivateRoute } from "./components/Routes/PrivateRoute";
 import { RestrictedRoute } from "./components/Routes/RestrictedRoute";
-import Layout from "./components/Layout/Layout";
 import { selectIsRefreshing } from "./redux/auth/selectors";
 import { refreshUser } from "./redux/auth/operations";
 
+import Layout from "./components/Layout/Layout";
 const HomePage = lazy(() => import("./pages/Home"));
 const ContactsPage = lazy(() => import("./pages/Contacts"));
-const RegisterPage = lazy(() => import("./pages/Register"));
+const RegisterPage = lazy(() => import("./pages/Registration"));
 const LoginPage = lazy(() => import("./pages/Login"));
 const NotFoundPage = lazy(() => import("./pages/NotFound"));
 
