@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { logOut } from "../../redux/auth/operations";
 import { selectUser } from "../../redux/auth/selectors";
+import toast from "react-hot-toast";
 
 const UserMenu = () => {
   const user = useSelector(selectUser);
@@ -11,7 +12,10 @@ const UserMenu = () => {
       <button
         type="button"
         onClick={() => {
-          dispatch(logOut());
+          dispatch(logOut())
+            .unwrap()
+            .then(() => toast.success("You're logged Out!"))
+            .catch(() => toast.error("Error, pls try again!"));
         }}
       >
         Log Out

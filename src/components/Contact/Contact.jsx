@@ -1,6 +1,6 @@
 import { FaPhone } from "react-icons/fa6";
 import { RiContactsFill } from "react-icons/ri";
-import css from "./Contact.module.css";
+import "./Contact.module.css";
 import { useDispatch } from "react-redux";
 import { deleteContact } from "../../redux/contacts/operations";
 import toast from "react-hot-toast";

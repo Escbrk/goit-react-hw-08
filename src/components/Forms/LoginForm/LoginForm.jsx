@@ -1,6 +1,7 @@
 import { Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { logIn } from "../../../redux/auth/operations";
+import toast from "react-hot-toast";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const LoginForm = () => {
         password: "",
       }}
       onSubmit={(values, actions) => {
-        dispatch(logIn(values));
+        dispatch(logIn(values)).unwrap().then(() => toast.success('You\'re logged in!')).catch((e) => toast.error('Error, pls try again!'));
         actions.resetForm();
       }}
     >
