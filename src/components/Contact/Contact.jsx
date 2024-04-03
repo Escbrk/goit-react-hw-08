@@ -4,32 +4,47 @@ import "./Contact.module.css";
 import { useDispatch } from "react-redux";
 import { deleteContact } from "../../redux/contacts/operations";
 import toast from "react-hot-toast";
+import { useState } from "react";
+import ContactEditor from "../ContactEditor/ContactEditor";
 
 const Contacts = ({ contacts }) => {
+  const [isEditing, setIsEditing] = useState();
   const dispatch = useDispatch();
   const { name, number, id } = contacts;
+
   return (
     <>
-      <div>
-        <p>
-          <RiContactsFill />
-          {name}
-        </p>
-        <p>
-          <FaPhone />
-          {number}
-        </p>
-      </div>
-      <button
-        onClick={() => {
-          dispatch(deleteContact(id))
-            .unwrap()
-            .then(() => toast.success("Deleted"))
-            .catch((e) => toast.error(e));
-        }}
-      >
-        Delete
-      </button>
+      {isEditing ? (
+        <ContactEditor
+          initialValue={contacts}
+          contactId={id}
+          onClose={() => setIsEditing(false)}
+        />
+      ) : (
+        <div>
+          <p>
+            <RiContactsFill />
+            {name}
+          </p>
+          <p>
+            <FaPhone />
+            {number}
+          </p>
+        </div>
+      )}
+
+      {!isEditing && (
+        <button
+          onClick={() => {
+            dispatch(deleteContact(id))
+              .unwrap()
+              .then(() => toast.success("Deleted"))
+              .catch((e) => toast.error(e));
+          }}
+        >
+          Delete
+        </button>
+      )}
     </>
   );
 };
