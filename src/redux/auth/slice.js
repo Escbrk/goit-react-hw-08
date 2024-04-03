@@ -39,7 +39,7 @@ export const slice = createSlice({
       .addCase(logOut.pending, (state) => {
         state.isLoggedIn = false;
       })
-      .addCase(logOut.fulfilled, (state, action) => {
+      .addCase(logOut.fulfilled, (state) => {
         state.user = {
           name: null,
           email: null,
