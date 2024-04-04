@@ -1,8 +1,10 @@
-import { Field, Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { logIn } from "../../../redux/auth/operations";
 import toast from "react-hot-toast";
 import * as Yup from "yup";
+import "./LoginForm.module.css";
+
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -35,11 +37,13 @@ const LoginForm = () => {
         <label>
           Email
           <Field type="email" name="email" />
+          <ErrorMessage name="email" component="span" />
         </label>
 
         <label>
           Password
           <Field type="password" name="password" />
+          <ErrorMessage name="password" component="span" />
         </label>
         <button type="submit">Login</button>
       </Form>

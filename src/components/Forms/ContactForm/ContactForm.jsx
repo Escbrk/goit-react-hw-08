@@ -1,5 +1,4 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { useId } from "react";
 import * as Yup from "yup";
 import css from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
@@ -19,8 +18,6 @@ const validationSchema = () =>
   });
 
 const ContactForm = () => {
-  const nameFieldId = useId();
-  const numberFieldId = useId();
   const dispatch = useDispatch();
 
   return (
@@ -36,13 +33,17 @@ const ContactForm = () => {
       }}
     >
       <Form className={css.container}>
-        <label htmlFor={nameFieldId}>Name</label>
-        <Field id={nameFieldId} name="name" />
-        <ErrorMessage name="name" component="span" />
+        <label>
+          Name
+          <Field name="name" />
+          <ErrorMessage name="name" component="span" />
+        </label>
 
-        <label htmlFor={numberFieldId}>Number</label>
-        <Field id={numberFieldId} name="number" />
-        <ErrorMessage name="number" component="span" />
+        <label>
+          Number
+          <Field name="number" />
+          <ErrorMessage name="number" component="span" />
+        </label>
 
         <button type="submit">Add contact</button>
       </Form>
