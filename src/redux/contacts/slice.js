@@ -5,6 +5,7 @@ import {
   editContact,
   fetchContacts,
 } from "./operations";
+import { logOut } from "../auth/operations";
 import { selectNameFilter } from "../filters/selectors";
 
 const handlePending = (state) => {
@@ -59,6 +60,11 @@ export const slice = createSlice({
       })
       .addCase(editContact.rejected, (state) => {
         state.error = true;
+        state.loading = false;
+      })
+      .addCase(logOut.fulfilled, (state) => {
+        state.items = [];
+        state.error = false;
         state.loading = false;
       }),
 });
