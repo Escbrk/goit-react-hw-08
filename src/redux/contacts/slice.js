@@ -7,6 +7,7 @@ import {
 } from "./operations";
 import { logOut } from "../auth/operations";
 import { selectNameFilter } from "../filters/selectors";
+import { selectContacts } from "./selectors";
 
 const handlePending = (state) => {
   state.loading = true;
@@ -69,7 +70,7 @@ export const slice = createSlice({
       }),
 });
 
-export const selectContacts = (state) => state.contacts.items;
+
 
 export default slice.reducer;
 

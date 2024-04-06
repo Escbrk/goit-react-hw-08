@@ -15,8 +15,8 @@ const ContactEditor = ({ contactId, initialValue, onClose }) => {
       onSubmit={(e) => {
         e.preventDefault();
         dispatch(editContact(value))
-          .then(() => onClose())
-          .catch(() => console.log(2));
+          // .then(() => onClose())
+          // .catch(() => console.log(2));
         //
       }}
     >
