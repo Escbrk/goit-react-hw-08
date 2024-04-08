@@ -1,4 +1,4 @@
-import { createSelector, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import {
   addContact,
   deleteContact,
@@ -6,8 +6,6 @@ import {
   fetchContacts,
 } from "./operations";
 import { logOut } from "../auth/operations";
-import { selectNameFilter } from "../filters/selectors";
-import { selectContacts } from "./selectors";
 
 const handlePending = (state) => {
   state.loading = true;
@@ -70,15 +68,4 @@ export const slice = createSlice({
       }),
 });
 
-
-
 export default slice.reducer;
-
-export const selectVisibleContacts = createSelector(
-  [selectContacts, selectNameFilter],
-  (contacts, nameFilter) => {
-    return contacts.filter((contact) =>
-      contact.name.toLowerCase().includes(nameFilter.toLowerCase())
-    );
-  }
-);
