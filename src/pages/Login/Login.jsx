@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import LoginForm from "../components/Forms/LoginForm/LoginForm";
+import LoginForm from "../../components/Forms/LoginForm/LoginForm";
 // import * as React from "react";
 // import Button from "@mui/material/Button";
 

@@ -10,11 +10,11 @@ import { selectIsRefreshing } from "./redux/auth/selectors";
 import { refreshUser } from "./redux/auth/operations";
 
 import Layout from "./components/Layout/Layout";
-const HomePage = lazy(() => import("./pages/Home"));
-const ContactsPage = lazy(() => import("./pages/Contacts"));
-const RegisterPage = lazy(() => import("./pages/Registration"));
-const LoginPage = lazy(() => import("./pages/Login"));
-const NotFoundPage = lazy(() => import("./pages/NotFound"));
+const HomePage = lazy(() => import("./pages/Home/Home.jsx"));
+const ContactsPage = lazy(() => import("./pages/Contacts/Contacts.jsx"));
+const RegisterPage = lazy(() => import("./pages/Registration/Registration.jsx"));
+const LoginPage = lazy(() => import("./pages/Login/Login.jsx"));
+const NotFoundPage = lazy(() => import("./pages/NotFound/NotFound.jsx"));
 
 const App = () => {
   const isRefreshing = useSelector(selectIsRefreshing);
