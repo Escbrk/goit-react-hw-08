@@ -1,6 +1,6 @@
 import { FaPhone } from "react-icons/fa6";
 import { RiContactsFill } from "react-icons/ri";
-import "./Contact.module.css";
+import css from "./Contact.module.css";
 import { useDispatch } from "react-redux";
 import { deleteContact } from "../../redux/contacts/operations";
 import toast from "react-hot-toast";
@@ -22,11 +22,11 @@ const Contacts = ({ contacts }) => {
         />
       ) : (
         <div>
-          <p>
+          <p className={css.info}>
             <RiContactsFill />
             {name}
           </p>
-          <p>
+          <p className={css.info}>
             <FaPhone />
             {number}
           </p>

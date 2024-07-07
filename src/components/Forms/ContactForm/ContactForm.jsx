@@ -1,6 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
-import css from "./ContactForm.module.css";
+import "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
 import { addContact } from "../../../redux/contacts/operations";
@@ -32,7 +32,7 @@ const ContactForm = () => {
         actions.resetForm();
       }}
     >
-      <Form className={css.container}>
+      <Form>
         <label>
           Name
           <Field name="name" />
