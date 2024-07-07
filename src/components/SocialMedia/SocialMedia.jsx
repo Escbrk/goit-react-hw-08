@@ -1,7 +1,7 @@
 import { FaInstagram, FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa6";
 import css from './SocialMedia.module.css'
 
-export const SocialMedia = () => {
+const SocialMedia = () => {
   return (
     <>
       <h3>Follow me:</h3>
@@ -46,3 +46,5 @@ export const SocialMedia = () => {
     </>
   );
 };
+
+export default SocialMedia

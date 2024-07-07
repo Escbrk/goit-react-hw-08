@@ -1,6 +1,6 @@
 import { FaAddressCard } from "react-icons/fa6";
 import css from "./Home.module.css";
-import { SocialMedia } from "../../components/SocialMedia/SocialMedia.jsx";
+import SocialMedia from "../../components/SocialMedia/SocialMedia.jsx";
 
 const Home = () => {
   return (
