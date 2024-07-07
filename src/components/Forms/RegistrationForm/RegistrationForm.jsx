@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { register } from "../../../redux/auth/operations";
 import toast from "react-hot-toast";
 import * as Yup from "yup";
-import "./RegistrationForm.module.css";
+import css from "./RegistrationForm.module.css";
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
@@ -13,12 +13,12 @@ const RegistrationForm = () => {
       name: Yup.string()
         .min(3, "Too Short!")
         .max(30, "Too Long!")
-        .required("This field is required"),
-      email: Yup.string().required("This field is required"),
+        .required("This field is required!"),
+      email: Yup.string().required("This field is required!"),
       password: Yup.string()
         .min(3, "Too Short!")
         .max(15, "Too Long!")
-        .required("This field is required"),
+        .required("This field is required!"),
     });
   return (
     <Formik
@@ -36,7 +36,7 @@ const RegistrationForm = () => {
         actions.resetForm();
       }}
     >
-      <Form>
+      <Form className={css.form}>
         <label>
           Username
           <Field type="text" name="name" />

@@ -4,6 +4,7 @@ import "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
 import { addContact } from "../../../redux/contacts/operations";
+import css from './ContactForm.module.css'
 
 const validationSchema = () =>
   Yup.object().shape({
@@ -32,7 +33,7 @@ const ContactForm = () => {
         actions.resetForm();
       }}
     >
-      <Form>
+      <Form className={css.form}>
         <label>
           Name
           <Field name="name" />

@@ -1,4 +1,4 @@
-header {
+.container {
   display: flex;
   gap: 15px;
   justify-content: space-between;
@@ -6,4 +6,9 @@ header {
   height: 60px;
   align-items: center;
   margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid lightblue;
 }

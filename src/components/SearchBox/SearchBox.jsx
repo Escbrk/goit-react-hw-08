@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { changeFilter } from "../../redux/filters/slice";
-import  "./SearchBox.module.css";
+import css from  "./SearchBox.module.css";
 import { selectNameFilter } from "../../redux/filters/selectors";
 
 const SearchBox = () => {
@@ -8,9 +8,10 @@ const SearchBox = () => {
   const filter = useSelector(selectNameFilter);
 
   return (
-    <div>
-      <p>Find contacts by name</p>
+    <div className={css.container}>
+      <p>Find contacts by name:</p>
       <input
+        className={css.input}
         type="text"
         value={filter}
         onChange={(e) => dispatch(changeFilter(e.target.value))}

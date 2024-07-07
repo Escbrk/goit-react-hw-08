@@ -6,12 +6,12 @@ const Home = () => {
   return (
     <div>
       <h1>Hello, User!</h1>
-      <p>This contact app will help you to organize your contacts!</p>
+      <h2>This contact app will help you to organize your contacts!</h2>
       <FaAddressCard className={css.contactCard} />
 
       <SocialMedia />
 
-      <h2>Made by Paul </h2>
+      <p className={css.sign}>Made by Paul&trade; </p>
     </div>
   );
 };

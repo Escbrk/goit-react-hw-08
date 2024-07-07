@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { logIn } from "../../../redux/auth/operations";
 import toast from "react-hot-toast";
 import * as Yup from "yup";
-import "./LoginForm.module.css";
+import css from "./LoginForm.module.css";
 
 
 const LoginForm = () => {
@@ -11,11 +11,11 @@ const LoginForm = () => {
 
   const validationSchema = () =>
     Yup.object().shape({
-      email: Yup.string().required("This field is required"),
+      email: Yup.string().required("This field is required!"),
       password: Yup.string()
         .min(3, "Too Short!")
         .max(30, "Too Long!")
-        .required("This field is required"),
+        .required("This field is required!"),
     });
 
   return (
@@ -33,7 +33,7 @@ const LoginForm = () => {
         actions.resetForm();
       }}
     >
-      <Form>
+      <Form className={css.form}>
         <label>
           Email
           <Field type="email" name="email" />

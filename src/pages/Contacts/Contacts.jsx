@@ -5,6 +5,7 @@ import { fetchContacts } from "../../redux/contacts/operations.js";
 import ContactList from "../../components/ContactList/ContactList";
 import SearchBox from "../../components/SearchBox/SearchBox";
 import ContactForm from "../../components/Forms/ContactForm/ContactForm";
+import css from "./Contacts.module.css";
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const Contacts = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className={css.container}>
       <h1>Phonebook</h1>
       <ContactForm />
       <SearchBox />
