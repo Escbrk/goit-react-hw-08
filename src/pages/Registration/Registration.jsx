@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import RegistrationForm from "../../components/Forms/RegistrationForm/RegistrationForm";
+import css from './Registration.module.css'
 
 const Registration = () => {
   return (
@@ -11,7 +12,7 @@ const Registration = () => {
       <RegistrationForm />
       <p>
         Or &#9;
-        <Link to="/login">login</Link>
+        <Link className={css.link} to="/login">login</Link>
       </p>
     </>
   );
