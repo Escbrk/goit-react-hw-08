@@ -4,14 +4,15 @@ import SocialMedia from "../../components/SocialMedia/SocialMedia.jsx";
 
 const Home = () => {
   return (
-    <div>
+    <div className={css.container}>
       <h1>Hello, User!</h1>
       <h2>This contact app will help you to organize your contacts!</h2>
       <FaAddressCard className={css.contactCard} />
 
-      <SocialMedia />
-
-      <p className={css.sign}>Made by Paul&trade; </p>
+      <div className={css.bottom}>
+        <SocialMedia />
+        <p className={css.sign}>Made by Paul&trade; </p>
+      </div>
     </div>
   );
 };

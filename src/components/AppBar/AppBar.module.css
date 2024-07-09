@@ -6,9 +6,29 @@
   height: 60px;
   align-items: center;
   margin: 0 auto;
+  padding: 0 2em;
 }
 
 header {
   width: 100%;
   border-bottom: 1px solid lightblue;
+}
+
+@media screen and (min-width: 375px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    max-width: 1280px;
+    height: 60px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 2em;
+  }
 }

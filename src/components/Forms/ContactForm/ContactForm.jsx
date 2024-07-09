@@ -11,11 +11,11 @@ const validationSchema = () =>
     name: Yup.string()
       .min(3, "Too Short!")
       .max(20, "Too Long!")
-      .required("This field is required"),
+      .required("⬅️ This field is required"),
     number: Yup.string()
       .min(3, "Too Short!")
       .max(15, "Too Long!")
-      .required("This field is required"),
+      .required("⬅️ This field is required"),
   });
 
 const ContactForm = () => {

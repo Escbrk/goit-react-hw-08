@@ -3,5 +3,5 @@
 }
 
 .input {
-  width: 300px;
+  width: calc(17% - 18px);
 }

@@ -13,12 +13,12 @@ const RegistrationForm = () => {
       name: Yup.string()
         .min(3, "Too Short!")
         .max(30, "Too Long!")
-        .required("This field is required!"),
-      email: Yup.string().required("This field is required!"),
+        .required("⬅️ This field is required!"),
+      email: Yup.string().required("⬅️ This field is required!"),
       password: Yup.string()
         .min(3, "Too Short!")
         .max(15, "Too Long!")
-        .required("This field is required!"),
+        .required("⬅️ This field is required!"),
     });
   return (
     <Formik

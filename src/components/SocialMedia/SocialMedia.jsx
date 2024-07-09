@@ -4,7 +4,7 @@ import css from './SocialMedia.module.css'
 const SocialMedia = () => {
   return (
     <>
-      <h3>Follow me:</h3>
+      <h3 className={css.title}>Follow me:</h3>
       <ul className={css.social_list}>
         <li>
           <a

@@ -4,4 +4,25 @@
 
 .sign {
   font-size: 20px;
+  margin-top: 0;
+}
+
+.container {
+  padding: 0 2em;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+@media screen and (min-width: 375px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1440px) {
 }
