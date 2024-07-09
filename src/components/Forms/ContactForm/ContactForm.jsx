@@ -35,13 +35,13 @@ const ContactForm = () => {
     >
       <Form className={css.form}>
         <label>
-          Name
+          Name:
           <Field name="name" />
           <ErrorMessage name="name" component="span" />
         </label>
 
         <label>
-          Number
+          Number:
           <Field name="number" />
           <ErrorMessage name="number" component="span" />
         </label>

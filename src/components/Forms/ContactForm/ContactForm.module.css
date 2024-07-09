@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 200px;
   margin: 0 auto;
   gap: 20px;
 }
@@ -10,4 +9,8 @@
 span {
   color: red;
   position: absolute;
+}
+
+label {
+  display: flex;
 }

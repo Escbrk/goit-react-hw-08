@@ -35,13 +35,13 @@ const LoginForm = () => {
     >
       <Form className={css.form}>
         <label>
-          Email
+          Email:
           <Field type="email" name="email" />
           <ErrorMessage name="email" component="span" />
         </label>
 
         <label>
-          Password
+          Password:
           <Field type="password" name="password" />
           <ErrorMessage name="password" component="span" />
         </label>

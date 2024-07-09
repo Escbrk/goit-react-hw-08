@@ -38,19 +38,19 @@ const RegistrationForm = () => {
     >
       <Form className={css.form}>
         <label>
-          Username
+          Username:
           <Field type="text" name="name" />
           <ErrorMessage name="name" component="span" />
         </label>
 
         <label>
-          Email
+          Email:
           <Field type="email" name="email" />
           <ErrorMessage name="email" component="span" />
         </label>
 
         <label>
-          Password
+          Password:
           <Field type="password" name="password" />
           <ErrorMessage name="password" component="span" />
         </label>
