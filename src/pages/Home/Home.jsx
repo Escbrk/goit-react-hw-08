@@ -5,8 +5,10 @@ import SocialMedia from "../../components/SocialMedia/SocialMedia.jsx";
 const Home = () => {
   return (
     <div className={css.container}>
-      <h1>Hello, User!</h1>
-      <h2>This contact app will help you to organize your contacts!</h2>
+      <h1 className={css.title}>Hello, User!</h1>
+      <p className={css.text}>
+        This contact app will help you to organize your contacts!
+      </p>
       <FaAddressCard className={css.contactCard} />
 
       <div className={css.bottom}>

@@ -1,9 +1,9 @@
 .contactCard {
-  font-size: 60px;
+  font-size: 30px;
 }
 
 .sign {
-  font-size: 20px;
+  font-size: 10px;
   margin-top: 0;
 }
 
@@ -18,11 +18,95 @@
   transform: translate(-50%);
 }
 
+.title {
+  font-size: 30px;
+}
+
+.text {
+  font-size: 13px;
+  text-align: right;
+}
+
 @media screen and (min-width: 375px) {
+  .contactCard {
+    font-size: 40px;
+  }
+
+  .sign {
+    font-size: 13px;
+    margin-top: 0;
+  }
+
+  .container {
+    padding: 0 2em;
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .title {
+    font-size: 35px;
+  }
+
+  .text {
+    font-size: 14px;
+    text-align: right;
+  }
 }
 
 @media screen and (min-width: 768px) {
+    .contactCard {
+    font-size: 50px;
+  }
+
+  .sign {
+    font-size: 15px;
+    margin-top: 0;
+  }
+
+  .container {
+    padding: 0 2em;
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .text {
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 1440px) {
+  .contactCard {
+    font-size: 60px;
+  }
+
+  .sign {
+    font-size: 20px;
+    margin-top: 0;
+  }
+
+  .container {
+    padding: 0 2em;
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
