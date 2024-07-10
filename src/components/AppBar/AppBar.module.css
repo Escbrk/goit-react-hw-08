@@ -47,5 +47,6 @@ header {
     align-items: center;
     margin: 0 auto;
     padding: 0 2em;
+    font-size: 16px;
   }
 }
