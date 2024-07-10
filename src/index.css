@@ -38,8 +38,8 @@ h1 {
 button {
   border-radius: 8px;
   border: transparent;
-  padding: 5px 15px;
-  font-size: 1em;
+  padding: 4px 10px;
+  font-size: 7px;
   font-weight: 500;
   font-family: inherit;
   background-color: #2c49f1;
@@ -67,5 +67,85 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  button {
+    border-radius: 8px;
+    border: transparent;
+    padding: 5px 10px;
+    font-size: 7px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #2c49f1;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    flex: 0 0 auto;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  button {
+    border-radius: 8px;
+    border: transparent;
+    padding: 5px 10px;
+    font-size: 8px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #2c49f1;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    flex: 0 0 auto;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  a {
+    color: white;
+    text-decoration: inherit;
+    transition: color 0.25s;
+  }
+
+  a:hover {
+    color: lightblue;
+  }
+
+  body {
+    margin: 0;
+    display: flex;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+
+  button {
+    border-radius: 8px;
+    border: transparent;
+    padding: 5px 15px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #2c49f1;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    flex: 0 0 auto;
+    align-self: center;
+  }
+
+  button:hover {
+    background-color: rgb(24, 122, 155);
+  }
+
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
   }
 }
