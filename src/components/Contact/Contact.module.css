@@ -4,11 +4,6 @@
   align-items: center;
 }
 
-button {
-  flex: 0 0 auto;
-  align-self: center;
-}
-
 .container {
   width: 200px;
 }

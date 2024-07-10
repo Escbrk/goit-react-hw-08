@@ -1,13 +1,11 @@
 span {
   color: red;
-  position: absolute;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin: 10% auto 0; */
   gap: 20px;
 }
 
